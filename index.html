@@ -29,8 +29,8 @@ body {
 /* ── HEADER ── */
 #header {
   background: var(--white); border-bottom: 1px solid var(--border);
-  padding: 8px 14px 6px;
-  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  padding: 6px 10px 4px;
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
   flex-shrink: 0;
 }
 #logo { height: 130px; width: auto; object-fit: contain; }
@@ -38,10 +38,10 @@ body {
 #dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); flex-shrink: 0; animation: pulse 2s infinite; }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
 #status-text { font-size: 11px; color: var(--dark); letter-spacing: 0.12em; text-transform: uppercase; font-weight: bold; }
-#hotel-badge { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); border: 1px solid var(--border); padding: 2px 9px; border-radius: 20px; display: none; }
-#hotel-badge.visible { display: inline-block; }
-#lang-bar { display: flex; gap: 3px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
-.lb { background: transparent; border: 1px solid var(--border); border-radius: 11px; padding: 3px 10px; font-size: 12px; cursor: pointer; font-family: 'Belleza', serif; color: var(--dark); transition: all .15s; font-weight: bold; }
+#hotel-badge { display: none; }
+#lang-bar { display: flex; gap: 2px; flex-wrap: nowrap; justify-content: center; margin-top: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+#lang-bar::-webkit-scrollbar { display: none; }
+.lb { background: transparent; border: 1px solid var(--border); border-radius: 10px; padding: 2px 7px; font-size: 11px; cursor: pointer; font-family: 'Belleza', serif; color: var(--dark); transition: all .15s; font-weight: bold; white-space: nowrap; flex-shrink: 0; }
 .lb:hover, .lb.on { border-color: var(--gold); color: var(--gold); background: var(--gold-pale); }
 
 /* ── HOTEL TABS ── */
@@ -87,7 +87,7 @@ body {
 .bubble { max-width: 82%; font-size: 14.5px; line-height: 1.75; font-family: 'Belleza', serif; word-break: break-word; }
 .bubble.user { background: var(--gold); color: #fff; border-radius: 15px 15px 4px 15px; padding: 9px 13px; }
 .bubble.bot { background: var(--white); color: var(--dark); border: 1px solid var(--border); border-radius: 4px 15px 15px 15px; box-shadow: 0 1px 4px rgba(184,149,90,.06); overflow: hidden; padding: 0; }
-.bubble.bot .bubble-img { width: 100%; height: 160px; object-fit: cover; display: block; border-radius: 4px 15px 0 0; }
+.bubble.bot .bubble-img { width: 100%; height: 200px; object-fit: cover; display: block; border-radius: 4px 15px 0 0; }
 .bubble.bot .bubble-text { padding: 9px 13px; }
 .bubble p { margin: 0 0 3px; display: block; }
 .bubble[dir="rtl"] p { text-align: right; }
@@ -147,10 +147,13 @@ body {
 
 /* ── MOBILE OVERRIDES ── */
 @media (max-width: 480px) {
-  #header { padding: 6px 10px 5px; gap: 3px; }
-  #logo { height: 82px; }
+  #header { padding: 4px 8px 3px; gap: 1px; }
+  #logo { height: 72px; }
+  #lang-bar { margin-top: 2px; gap: 1px; }
+  .lb { padding: 2px 6px; font-size: 10px; }
   .htab { font-size: 12.5px; padding: 10px 2px; letter-spacing: 0.05em; }
   .bubble { font-size: 13.5px; }
+  .bubble.bot .bubble-img { height: 140px; }
   #messages { padding: 10px; gap: 10px; }
 }
 </style>
