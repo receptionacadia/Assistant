@@ -18,7 +18,7 @@
   --safe-top: env(safe-area-inset-top, 0px);
 }
 
-html { height: 100%; font-family: 'Belleza', serif; background: #eee8de; }
+html { height: 100%; font-family: 'Belleza', serif; }
 body {
   display: flex; flex-direction: column;
   height: 100dvh; /* dynamic viewport height — fixes mobile browser chrome */
@@ -26,8 +26,6 @@ body {
   background: var(--bg); color: var(--dark);
   padding-bottom: var(--safe-bottom);
   padding-top: var(--safe-top);
-  max-width: 600px; margin: 0 auto;
-  box-shadow: 0 0 30px rgba(0,0,0,.06);
 }
 
 /* ── HEADER ── */
@@ -206,6 +204,9 @@ body {
       <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
     </svg>
   </button>
+
+<div id="insurance-bar" style="text-align:center;padding:4px 0 6px;background:var(--white);border-top:1px solid var(--border);flex-shrink:0;">
+  <a href="https://www.alpstay.eu/en/secure.asp" target="_blank" rel="noopener" style="font-size:11px;color:var(--gold);text-decoration:none;font-family:'Belleza',serif;letter-spacing:0.08em;">🛡️ <span id="ins-label">Assicurazione Viaggio</span></a>
 </div>
 
 <script>
@@ -243,7 +244,7 @@ const KB = {
     keys: ["saslong","santa cristina","s. cristina","st. christina","smart hotel","soplajes","blu bistrot","blue bistrot","圣克里斯蒂娜","산타 크리스티나","санта кристина"],
     hotels: ["all","saslong"],
     thumb: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80",
-    it: "**Smart Hotel Saslong ★★★** — Smart | Pet-friendly | E-mobility\n📍 Via Rezia 308, Santa Cristina (BZ)\n📞 +39 0471 774 480 | 📧 info@saslong.eu | saslong.eu\n⏰ Reception: 7:30–11:30 e 15:00–19:00 | Check-in: 15:00 | Check-out: 10:30\n\n**Camere:** Doppie · Triple · Quadruple · Family\n\n**INCLUSO nel prezzo:**\n· Buffet Breakfast 7:30–10:30 (early breakfast 6:30–7:30)\n· Biglietti per trasporto pubblico bus/skibus\n· Wi-Fi, deposito sci scalda scarponi, skipass service, Guest Pass\n· Parcheggio privato gratuito | Fermata Skibus \"Soplajes\" davanti\n· Dog Shower in garage + Kit benvenuto | Ricarica e-bike\n\n**A PAGAMENTO:**\n· Honesty Bar 24h | Blu Bar 15:00–23:00\n· Blu Bistrot 18:00–21:30 — CHIUSO MERCOLEDÌ\n· Lavanderia self-service €5+€5+€1 detersivo (Smart Hub, 24/7)\n· Ricarica EV: €6/h (max 3h) | Deposito bagagli: €10/gg | Garage: €8/gg\n\n**Cani:** max 1/camera, €25/notte, regalo al check-in\n**Cancellazione:** Rimborsabile = cancellazione gratuita fino 6gg prima | NRR = non rimborsabile\n\n⚠️ Saslong NON ha sauna, wellness o palestra.",
+    it: "**Smart Hotel Saslong ★★★** — Smart | Pet-friendly | E-mobility\n📍 Via Rezia 308, Santa Cristina (BZ)\n📞 +39 0471 774 480 | WhatsApp: +39 324 872 9239\n📧 info@saslong.eu | saslong.eu\n⚡ Emergenza: +39 333 682 8717\n⏰ Reception: 7:30–11:30 e 15:00–19:00 | Check-in: 15:00 | Check-out: 10:30\n\n**Camere:** Doppie · Triple · Quadruple · Family\n\n**INCLUSO nel prezzo:**\n· Buffet Breakfast 7:30–10:30 (early breakfast 6:30–7:30)\n· Biglietti per trasporto pubblico bus/skibus\n· Wi-Fi, deposito sci scalda scarponi, skipass service, Guest Pass\n· Parcheggio privato gratuito | Fermata Skibus \"Soplajes\" davanti\n· Dog Shower in garage + Kit benvenuto | Ricarica e-bike\n\n**A PAGAMENTO:**\n· Honesty Bar 24h | Blu Bar 15:00–23:00\n· Blu Bistrot 18:00–21:30 — CHIUSO MERCOLEDÌ\n· Lavanderia self-service €5+€5+€1 detersivo (Smart Hub, 24/7)\n· Ricarica EV: €6/h (max 3h) | Deposito bagagli: €10/gg | Garage: €8/gg\n\n**Cani:** max 1/camera, €25/notte, regalo al check-in\n**Cancellazione:** Rimborsabile = cancellazione gratuita fino 6gg prima | NRR = non rimborsabile\n\n⚠️ Saslong NON ha sauna, wellness o palestra.",
     de: "**Smart Hotel Saslong ★★★** — Smart | Haustierfreundlich | E-Mobilität\n📍 Via Rezia 308, St. Christina (BZ)\n📞 +39 0471 774 480 | saslong.eu\n⏰ Büro: 7:30–11:30 & 15:00–19:00 | Check-in: 15:00 | Check-out: 10:30\n\n**Zimmer:** Doppel · Dreibett · Vierbett · Family\n\n**INKLUSIVE:**\n· Buffet Breakfast 7:30–10:30 (Frühaufsteher 6:30–7:30)\n· Ski-Shuttle | WLAN | Skiroom (Schuhtrockner) | Skipassservice | Guest Pass\n· Kostenloser Parkplatz | Bushaltestelle „Soplajes\" vor dem Hotel\n· Hundewäsche+Kit | E-Bike-Ladestation\n\n**GEGEN AUFPREIS:**\n· Honesty Bar 24h | Blu Bar 15–23h\n· Blu Bistrot 18–21:30 — MITTWOCH GESCHLOSSEN\n· Wäscherei €5+€5+€1 | EV €6/h | Gepäck €10/Tag | Garage €8/Tag\n\n**Hunde:** max 1/Zimmer, €25/Nacht, Willkommensgeschenk\n\n⚠️ KEIN Wellness/Sauna/Fitness.",
     en: "**Smart Hotel Saslong ★★★** — Smart | Pet-friendly | E-mobility\n📍 Via Rezia 308, Santa Cristina (BZ)\n📞 +39 0471 774 480 | info@saslong.eu | saslong.eu\n⏰ Reception: 7:30–11:30 AM & 3:00–7:00 PM | Check-in: 3:00 PM | Check-out: 10:30 AM\n\n**Rooms:** Double · Triple · Quadruple · Family\n\n**INCLUDED:**\n· Buffet Breakfast 7:30–10:30 AM (early breakfast 6:30–7:30 AM)\n· Ski shuttle to lifts | Wi-Fi | Ski storage (boot warmer) | Skipass service | Guest Pass\n· Free private parking | Skibus stop \"Soplajes\" directly in front\n· Dog Shower in garage + welcome kit | E-bike charging\n\n**EXTRA CHARGE:**\n· Honesty Bar 24h | Blu Bar 3:00–11:00 PM\n· Blu Bistrot 6:00–9:30 PM — CLOSED WEDNESDAY\n· Laundry €5+€5+€1 | EV charging €6/h | Luggage €10/day | Garage €8/day\n\n**Dogs:** max 1/room, €25/night, welcome gift at check-in\n\n⚠️ NO sauna, wellness or gym.",
     zh: "**Smart Hotel Saslong ★★★** — 智能 | 宠物友好 | 电动出行\n📍 Via Rezia 308, 圣克里斯蒂娜\n📞 +39 0471 774 480 | saslong.eu\n⏰ 前台：7:30–11:30 & 15:00–19:00 | 入住：14:00 | 退房：10:30\n\n**客房：** 双人·三人·四人·家庭\n\n**含服务：**\n· 自助早餐 (Buffet Breakfast) 7:30–10:30（早起 6:30–7:30）\n· 接驳车至滑雪场 | Wi-Fi | 滑雪存储（靴子烘干机）| 交通卡\n· 免费停车场 | \"Soplajes\"公交站（门前）\n· 狗狗淋浴+套装 | 电动自行车充电\n\n**收费服务：**\n· 诚实吧 24h | Blu Bar 15:00–23:00\n· Blu Bistrot 18:00–21:30 — 周三休息\n· 洗衣 €5+€5+€1 | EV充电 €6/h | 行李 €10/天 | 车库 €8/天\n\n**宠物：** 最多1只/间，€25/晚，入住时有礼物\n\n⚠️ 无桑拿/健康中心/健身房。",
@@ -399,9 +400,9 @@ const KB = {
     keys: ["contatto","contatti","telefono","numero","whatsapp","email","scrivere","chiamare","reception","orario reception","emergenza","lingue","francese","spagnolo","contacts","contact","phone","call","write","languages","联系","联系方式","연락처","контакт","contacto","urgenza","urgency","emergency","help","aiuto","اتصل بنا","ติดต่อ"],
     hotels: ["all","acadia","hartmann","saslong"],
     thumb: "https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=800&q=80",
-    it: "**Contatti Alpstay**\n\n**Hotel Acadia** (Selva)\n📞 +39 0471 774 400 | WhatsApp: +39 377 356 5900\n📧 info@hotel-acadia.com | hotel-acadia.com\n🕐 Reception: 8:00–21:00 | ⚡ Emergenza h24: +39 331 220 5525\n\n---\n\n**Smart Hotel Saslong** (S. Cristina)\n📞 +39 0471 774 480 | 📧 info@saslong.eu | saslong.eu\n🕐 Reception: 7:30–11:30 / 15:00–19:00\n\n---\n\n**Chalet Hotel Hartmann** (Ortisei)\n📞 +39 0471 774 440 | WhatsApp: +39 377 397 9120\n📧 info@hotel-hartmann.com | hotel-hartmann.com\n🕐 Reception: 8:00–11:00 / 15:00–19:00\n\n---\n\n**Alpstay Centrale:** 📞 +39 0471 774444 | 📧 info@alpstay.eu | alpstay.eu\n\nLingue: Italiano · Tedesco · Inglese\nFrancese/Spagnolo: non garantiti — contattare direttamente.",
-    de: "**Alpstay Kontakte**\n\n**Hotel Acadia** (Wolkenstein)\n📞 +39 0471 774 400 | WhatsApp: +39 377 356 5900 | hotel-acadia.com\n🕐 Rezeption: 8:00–21:00 | ⚡ Notfall 24h: +39 331 220 5525\n\n---\n\n**Smart Hotel Saslong** (St. Christina)\n📞 +39 0471 774 480 | saslong.eu\n🕐 Büro: 7:30–11:30 / 15:00–19:00\n\n---\n\n**Chalet Hotel Hartmann** (St. Ulrich)\n📞 +39 0471 774 440 | WhatsApp: +39 377 397 9120 | hotel-hartmann.com\n🕐 Rezeption: 8:00–11:00 / 15:00–19:00\n\n---\n\n**Alpstay:** 📞 +39 0471 774444 | alpstay.eu\n\nSprachen: Italienisch · Deutsch · Englisch\nFranzösisch/Spanisch: nicht garantiert.",
-    en: "**Alpstay Contacts**\n\n**Hotel Acadia** (Selva)\n📞 +39 0471 774 400 | WhatsApp: +39 377 356 5900 | hotel-acadia.com\n🕐 Reception: 8:00 AM–9:00 PM | ⚡ 24h Emergency: +39 331 220 5525\n\n---\n\n**Smart Hotel Saslong** (S. Cristina)\n📞 +39 0471 774 480 | info@saslong.eu | saslong.eu\n🕐 Reception: 7:30–11:30 AM / 3:00–7:00 PM\n\n---\n\n**Chalet Hotel Hartmann** (Ortisei)\n📞 +39 0471 774 440 | WhatsApp: +39 377 397 9120 | hotel-hartmann.com\n🕐 Reception: 8:00–11:00 AM / 3:00–7:00 PM\n\n---\n\n**Alpstay Central:** 📞 +39 0471 774444 | info@alpstay.eu | alpstay.eu\n\nLanguages: Italian · German · English\nFrench/Spanish: not guaranteed — contact directly.",
+    it: "**Contatti Alpstay**\n\n**Hotel Acadia** (Selva)\n📞 +39 0471 774 400 | WhatsApp: +39 377 356 5900\n📧 info@hotel-acadia.com | hotel-acadia.com\n🕐 Reception: 8:00–21:00 | ⚡ Emergenza h24: +39 331 220 5525\n\n---\n\n**Smart Hotel Saslong** (S. Cristina)\n📞 +39 0471 774 480 | WhatsApp: +39 324 872 9239\n📧 info@saslong.eu | saslong.eu\n🕐 Reception: 7:30–11:30 / 15:00–19:00\n⚡ Emergenza: +39 333 682 8717\n\n---\n\n**Chalet Hotel Hartmann** (Ortisei)\n📞 +39 0471 774 440 | WhatsApp: +39 377 397 9120\n📧 info@hotel-hartmann.com | hotel-hartmann.com\n🕐 Reception: 8:00–11:00 / 15:00–19:00\n\n---\n\n**Alpstay Centrale:** 📞 +39 0471 774444 | 📧 info@alpstay.eu | alpstay.eu\n\nLingue: Italiano · Tedesco · Inglese\nFrancese/Spagnolo: non garantiti — contattare direttamente.",
+    de: "**Alpstay Kontakte**\n\n**Hotel Acadia** (Wolkenstein)\n📞 +39 0471 774 400 | WhatsApp: +39 377 356 5900 | hotel-acadia.com\n🕐 Rezeption: 8:00–21:00 | ⚡ Notfall 24h: +39 331 220 5525\n\n---\n\n**Smart Hotel Saslong** (St. Christina)\n📞 +39 0471 774 480 | WhatsApp: +39 324 872 9239\nsaslong.eu\n🕐 Büro: 7:30–11:30 / 15:00–19:00\n⚡ Notfall: +39 333 682 8717\n\n---\n\n**Chalet Hotel Hartmann** (St. Ulrich)\n📞 +39 0471 774 440 | WhatsApp: +39 377 397 9120 | hotel-hartmann.com\n🕐 Rezeption: 8:00–11:00 / 15:00–19:00\n\n---\n\n**Alpstay:** 📞 +39 0471 774444 | alpstay.eu\n\nSprachen: Italienisch · Deutsch · Englisch\nFranzösisch/Spanisch: nicht garantiert.",
+    en: "**Alpstay Contacts**\n\n**Hotel Acadia** (Selva)\n📞 +39 0471 774 400 | WhatsApp: +39 377 356 5900 | hotel-acadia.com\n🕐 Reception: 8:00 AM–9:00 PM | ⚡ 24h Emergency: +39 331 220 5525\n\n---\n\n**Smart Hotel Saslong** (S. Cristina)\n📞 +39 0471 774 480 | WhatsApp: +39 324 872 9239\ninfo@saslong.eu | saslong.eu\n🕐 Reception: 7:30–11:30 AM / 3:00–7:00 PM\n⚡ Emergency: +39 333 682 8717\n\n---\n\n**Chalet Hotel Hartmann** (Ortisei)\n📞 +39 0471 774 440 | WhatsApp: +39 377 397 9120 | hotel-hartmann.com\n🕐 Reception: 8:00–11:00 AM / 3:00–7:00 PM\n\n---\n\n**Alpstay Central:** 📞 +39 0471 774444 | info@alpstay.eu | alpstay.eu\n\nLanguages: Italian · German · English\nFrench/Spanish: not guaranteed — contact directly.",
     zh: "**Alpstay 联系方式**\n\n**Hotel Acadia**（塞尔瓦）\n📞 +39 0471 774 400 | WhatsApp：+39 377 356 5900 | hotel-acadia.com\n🕐 前台：8:00–21:00 | ⚡ 24h紧急：+39 331 220 5525\n\n---\n\n**Smart Hotel Saslong**（圣克里斯蒂娜）\n📞 +39 0471 774 480 | saslong.eu | 🕐 7:30–11:30 / 15:00–19:00\n\n---\n\n**Chalet Hotel Hartmann**（奥尔蒂塞伊）\n📞 +39 0471 774 440 | WhatsApp：+39 377 397 9120 | hotel-hartmann.com\n🕐 前台：8:00–11:00 / 15:00–19:00\n\n---\n\n**Alpstay总线：** +39 0471 774444 | alpstay.eu\n\n语言：意大利语 · 德语 · 英语\n法语/西班牙语：不保证 — 请直接联系。",
     ko: "**Alpstay 연락처**\n\n**Hotel Acadia**（셀바）\n📞 +39 0471 774 400 | WhatsApp: +39 377 356 5900 | hotel-acadia.com\n🕐 프런트: 8:00–21:00 | ⚡ 24h 긴급: +39 331 220 5525\n\n---\n\n**Smart Hotel Saslong**（산타 크리스티나）\n📞 +39 0471 774 480 | saslong.eu | 🕐 7:30–11:30 / 15:00–19:00\n\n---\n\n**Chalet Hotel Hartmann**（오르티세이）\n📞 +39 0471 774 440 | WhatsApp: +39 377 397 9120 | hotel-hartmann.com\n🕐 프런트: 8:00–11:00 / 15:00–19:00\n\n---\n\n**Alpstay 중앙:** +39 0471 774444 | alpstay.eu\n\n언어: 이탈리아어 · 독일어 · 영어\n프랑스어/스페인어: 미보장 — 직접 문의.",
     es: "**Contactos Alpstay**\n\n**Hotel Acadia** (Selva)\n📞 +39 0471 774 400 | WhatsApp: +39 377 356 5900 | hotel-acadia.com\n🕐 Recepción: 8:00–21:00 | ⚡ Emergencia 24h: +39 331 220 5525\n\n---\n\n**Smart Hotel Saslong** (S. Cristina)\n📞 +39 0471 774 480 | saslong.eu | 🕐 7:30–11:30 / 15:00–19:00\n\n---\n\n**Chalet Hotel Hartmann** (Ortisei)\n📞 +39 0471 774 440 | WhatsApp: +39 377 397 9120 | hotel-hartmann.com\n🕐 Reception: 8:00–11:00 AM / 3:00–7:00 PM\n\n---\n\n**Alpstay Central:** 📞 +39 0471 774444 | alpstay.eu\n\nIdiomas: Italiano · Alemán · Inglés\nFrancés/Español: no garantizados — contactar directamente.",
@@ -477,7 +478,7 @@ const FALLBACK = {
   zh: "我暂时没有这个问题的具体答案。请联系我们：\n📞 +39 0471 774444 | 📧 info@alpstay.eu",
   ko: "이 질문에 대한 답변을 찾지 못했습니다.\n📞 +39 0471 774444 | 📧 info@alpstay.eu",
   es: "No tengo respuesta específica. Contáctenos:\n📞 +39 0471 774444 | 📧 info@alpstay.eu",
-  ru: "У меня нет конкретного ответа. Свяжитесь с нами:\n📞 +39 0471 774444 | 📧 info@alpstay.eu",
+  ru: "Не нашли нужного ответа? Свяжитесь с нами:\n📞 +39 0471 774444 | 📧 info@alpstay.eu",
   th: "ไม่มีคำตอบเฉพาะสำหรับคำถามนี้ กรุณาติดต่อเรา:\n📞 +39 0471 774444 | 📧 info@alpstay.eu",
   ar: "لا تتوفر لدي إجابة محددة. يرجى التواصل معنا:\n📞 +39 0471 774444 | 📧 info@alpstay.eu",
 };
@@ -491,7 +492,7 @@ const WELCOME = {
     zh:"欢迎来到 **Alpstay Hotels & Experiences** — *Be Free. Stay True.*\n\n我是您在加尔代纳山谷的虚拟助手。请在上方选择一家酒店或直接提问。\n\n· **Chalet Hotel Hartmann** — 奥尔蒂塞伊\n· **Smart Hotel Saslong** — 圣克里斯蒂娜\n· **Hotel Acadia Adults Only** — 塞尔瓦",
     ko:"**Alpstay Hotels & Experiences**에 오신 것을 환영합니다 — *Be Free. Stay True.*\n\n저는 발 가르데나의 가상 어시스턴트입니다. 위에서 호텔을 선택하거나 질문해 주세요.\n\n· **Chalet Hotel Hartmann** — 오르티세이\n· **Smart Hotel Saslong** — 산타 크리스티나\n· **Hotel Acadia Adults Only** — 셀바",
     es:"Bienvenidos a **Alpstay Hotels & Experiences** — *Be Free. Stay True.*\n\nSoy su asistente virtual para Val Gardena. Seleccione un hotel arriba o haga una pregunta.\n\n· **Chalet Hotel Hartmann** — Ortisei\n· **Smart Hotel Saslong** — Santa Cristina\n· **Hotel Acadia Adults Only** — Selva",
-    ru:"Добро пожаловать в **Alpstay Hotels & Experiences** — *Be Free. Stay True.*\n\nЯ ваш виртуальный ассистент в Валь Гардена. Выберите отель выше или задайте вопрос.\n\n· **Chalet Hotel Hartmann** — Ортизей\n· **Smart Hotel Saslong** — Санта Кристина\n· **Hotel Acadia Adults Only** — Сельва",
+    ru:"Добро пожаловать в **Alpstay Hotels & Experiences** — *Be Free. Stay True.*\n\nЯ ваш виртуальный ассистент в Val Gardena. Выберите отель из списка выше или напишите ваш вопрос — я с радостью помогу!\n\n· **Chalet Hotel Hartmann** — Ортизей\n· **Smart Hotel Saslong** — Санта Кристина\n· **Hotel Acadia Adults Only** — Сельва",
     th:"ยินดีต้อนรับสู่ **Alpstay Hotels & Experiences** — *Be Free. Stay True.*\n\nผม/ดิฉันเป็นผู้ช่วยเสมือนของคุณสำหรับ Val Gardena เลือกโรงแรมด้านบนหรือถามคำถาม\n\n· **Chalet Hotel Hartmann** — Ortisei\n· **Smart Hotel Saslong** — Santa Cristina\n· **Hotel Acadia Adults Only** — Selva",
     ar:"مرحباً بكم في **Alpstay Hotels & Experiences** — *Be Free. Stay True.*\n\nأنا مساعدكم الافتراضي في Val Gardena. اختاروا فندقاً أعلاه أو اطرحوا سؤالاً.\n\n· **Chalet Hotel Hartmann** — Ortisei\n· **Smart Hotel Saslong** — Santa Cristina\n· **Hotel Acadia Adults Only** — Selva",
   },
@@ -502,7 +503,7 @@ const WELCOME = {
     zh:"**Chalet Hotel Hartmann ★★★** — 奥尔蒂塞伊\n\n欢迎！我是Chalet Hotel Hartmann的数字助手。\n浪漫精品小屋、温泉（3个桑拿+休息区）、当地美食早餐、滑雪服务和班车。",
     ko:"**Chalet Hotel Hartmann ★★★** — 오르티세이\n\n환영합니다! 저는 Chalet Hotel Hartmann의 디지털 어시스턴트입니다.\n로맨틱 부티크 샬레, 사우나 3개+휴식 공간, 현지 미식 조식, 스키 서비스와 셔틀.",
     es:"**Chalet Hotel Hartmann ★★★** — Ortisei\n\n¡Bienvenido! Soy su asistente digital para Chalet Hotel Hartmann.\nChalet romántico boutique, wellness con 3 saunas y zona relax, desayuno gourmet con productos locales, servicio de esquí y shuttle a las pistas.",
-    ru:"**Chalet Hotel Hartmann ★★★** — Ортизей\n\nДобро пожаловать! Я ваш цифровой ассистент для Chalet Hotel Hartmann.\nРомантичное шале, велнес с 3 саунами и зоной отдыха, завтрак-гурме из местных продуктов, лыжный сервис и трансфер к склонам.",
+    ru:"**Chalet Hotel Hartmann ★★★** — Ортизей\n\nДобро пожаловать! Я ваш цифровой ассистент Chalet Hotel Hartmann.\nНаше романтичное шале предлагает атмосферу уюта и уединения, велнес-зону с тремя саунами и зоной отдыха. Начните день с гурме-завтрака из свежих местных продуктов и воспользуйтесь удобным лыжным сервисом и трансфером к склонам.",
     th:"**Chalet Hotel Hartmann ★★★** — Ortisei\n\nยินดีต้อนรับ! ผม/ดิฉันเป็นผู้ช่วยดิจิทัลสำหรับ Chalet Hotel Hartmann\nชาเลต์โรแมนติก เวลเนสพร้อมซาวน่า 3 แห่งและโซนพักผ่อน อาหารเช้าระดับกูร์เมต์ สกีเซอร์วิสและรถรับส่ง",
     ar:"**Chalet Hotel Hartmann ★★★** — Ortisei\n\nمرحباً! أنا مساعدكم الرقمي لـ Chalet Hotel Hartmann.\nشاليه رومانسي، منتجع صحي مع 3 حمامات ساونا ومنطقة استرخاء، فطور فاخر، خدمة تزلج ونقل.",
   },
@@ -513,7 +514,7 @@ const WELCOME = {
     zh:"**Smart Hotel Saslong ★★★** — 圣克里斯蒂娜\n\n欢迎！我是Smart Hotel Saslong的助手。\n宠物友好、电动出行、Blue Bistrot餐厅，公交站\"Soplajes\"就在门前，车票含在房价中。\n\n⚠️ 注意：Saslong无温泉/桑拿区。",
     ko:"**Smart Hotel Saslong ★★★** — 산타 크리스티나\n\n환영합니다! Smart Hotel Saslong의 어시스턴트입니다.\n반려동물 친화, E-모빌리티, Blue Bistrot 레스토랑, 입구 바로 앞 버스 정류장 \"Soplajes\" (교통권 포함).\n\n⚠️ 참고: Saslong은 웰니스/사우나 없음.",
     es:"**Smart Hotel Saslong ★★★** — Santa Cristina\n\n¡Bienvenido! Soy su asistente para Smart Hotel Saslong.\nMascotas, e-movilidad, Restaurante Blue Bistrot y parada \"Soplajes\" justo en la entrada con billetes incluidos.\n\n⚠️ Nota: Saslong no tiene área wellness/sauna.",
-    ru:"**Smart Hotel Saslong ★★★** — Санта Кристина\n\nДобро пожаловать! Я ваш ассистент Smart Hotel Saslong.\nПитомцы, E-мобильность, ресторан Blue Bistrot и остановка \"Soplajes\" у входа, билеты включены в стоимость.\n\n⚠️ Примечание: В Saslong нет велнеса/сауны.",
+    ru:"**Smart Hotel Saslong ★★★** — Санта Кристина\n\nДобро пожаловать! Я ваш цифровой ассистент Smart Hotel Saslong.\nОтель, в котором всё продумано для вашего удобства: размещение с питомцами, зарядка для электромобилей, ресторан Blue Bistrot, а также остановка «Soplajes» прямо у входа (билеты включены в стоимость).\n\n⚠️ Обратите внимание: в отеле нет велнес-зоны и сауны.",
     th:"**Smart Hotel Saslong ★★★** — Santa Cristina\n\nยินดีต้อนรับ! ผม/ดิฉันเป็นผู้ช่วยสำหรับ Smart Hotel Saslong\nรับสัตว์เลี้ยง, E-mobility, ร้านอาหาร Blue Bistrot และป้ายรถบัส \"Soplajes\" หน้าทางเข้า ตั๋วรวมในราคาห้องพัก\n\n⚠️ หมายเหตุ: Saslong ไม่มีซาวน่า/เวลเนส",
     ar:"**Smart Hotel Saslong ★★★** — Santa Cristina\n\nمرحباً! أنا مساعدكم لـ Smart Hotel Saslong.\nصديق للحيوانات الأليفة، التنقل الكهربائي، مطعم Blue Bistrot ومحطة \"Soplajes\" أمام المدخل، التذاكر مشمولة.\n\n⚠️ ملاحظة: لا يوجد ساونا/منتجع صحي في Saslong.",
   },
@@ -524,7 +525,7 @@ const WELCOME = {
     zh:"**Hotel Acadia Adults Only ★★★★** — 塞尔瓦\n\n欢迎！我是Hotel Acadia的助手。\n直接上雪道、SIELLES温泉中心（2个桑拿和2个红外线躺椅）、Norbert Dejaco主厨的Bistrot B24餐厅和鸡尾酒吧。",
     ko:"**Hotel Acadia Adults Only ★★★★** — 셀바\n\n환영합니다! Hotel Acadia의 어시스턴트입니다.\n직접 스키인/스키아웃, SIELLES 웰니스 센터(사우나 2개+적외선 라운저 2개), Chef Norbert Dejaco의 Bistrot B24 레스토랑과 칵테일 바.",
     es:"**Hotel Acadia Adults Only ★★★★** — Selva di Val Gardena\n\n¡Bienvenido! Soy su asistente para Hotel Acadia.\nSki-in/Ski-out directo, wellness SIELLES con 2 saunas y 2 tumbonas infrarrojas, Restaurante Bistrot B24 con Chef Norbert Dejaco y Cocktail Bar.",
-    ru:"**Hotel Acadia Adults Only ★★★★** — Сельва\n\nДобро пожаловать! Я ваш ассистент Hotel Acadia.\nПрямой ski-in/ski-out, велнес SIELLES (2 сауны и 2 инфракрасных шезлонга), ресторан Bistrot B24 с шефом Dejaco и коктейль-бар.",
+    ru:"**Hotel Acadia Adults Only ★★★★** — Сельва\n\nДобро пожаловать! Я ваш виртуальный помощник Hotel Acadia.\nНаслаждайтесь прямым доступом к склонам «ski-in/ski-out», расслабьтесь в велнес-центре SIELLES с двумя саунами и двумя инфракрасными шезлонгами, попробуйте блюда в ресторане Bistrot B24 под руководством шеф-повара Dejaco и завершите день в нашем коктейль-баре.",
     th:"**Hotel Acadia Adults Only ★★★★** — Selva di Val Gardena\n\nยินดีต้อนรับ! ผม/ดิฉันเป็นผู้ช่วยสำหรับ Hotel Acadia\nSki-in/Ski-out โดยตรง, เวลเนส SIELLES (ซาวน่า 2 แห่ง + เก้าอี้อินฟราเรด 2 ตัว), ร้านอาหาร Bistrot B24 กับเชฟ Norbert Dejaco และค็อกเทลบาร์",
     ar:"**Hotel Acadia Adults Only ★★★★** — Selva di Val Gardena\n\nمرحباً! أنا مساعدكم لـ Hotel Acadia.\nتزلج مباشر Ski-in/Ski-out، منتجع SIELLES الصحي (ساونتان + كرسيان بالأشعة تحت الحمراء)، مطعم Bistrot B24 مع الشيف Norbert Dejaco وبار كوكتيل.",
   },
@@ -983,8 +984,21 @@ function addMessage(role, text, thumb) {
 }
 
 // ── UI STATE ──────────────────────────────────────────────────────────────────
+const INS_LABELS = {
+    it: "Assicurazione Viaggio",
+    de: "Reiseversicherung",
+    en: "Travel Insurance",
+    es: "Seguro de Viaje",
+    ru: "Страхование путешествий",
+    zh: "旅行保险",
+    ko: "여행 보험",
+    th: "ประกันการเดินทาง",
+    ar: "تأمين السفر"
+  };
+
 function setLangUI(l) {
   currentLang = l;
+  document.getElementById("ins-label").textContent = INS_LABELS[l] || INS_LABELS.en;
   document.querySelectorAll(".lb").forEach(b => b.classList.toggle("on", b.textContent.trim() === LANG_LABELS[l]));
   document.getElementById("user-input").placeholder = PLACEHOLDER[l] || PLACEHOLDER.en;
   buildQuick(l);
